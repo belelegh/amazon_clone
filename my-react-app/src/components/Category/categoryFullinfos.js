@@ -1,24 +1,55 @@
+// export const CategoryInfos = [
+//     {
+//   electronics: {
+//     title: "Electronics",
+//     name: "Latest Gadgets & Tech",
+//     imageLink: "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=400&fit=crop"
+//   },
+//   mensClothing: {
+//     title: "Men's Clothing",
+//     name: "Premium Fashion Wear",
+//     imageLink: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&h=400&fit=crop"
+//   },
+//   fashionTrends: {
+//     title: "Discover Fashion Trends",
+//     name: "Style Inspiration 2024",
+//     imageLink: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=400&fit=crop"
+//   },
+//   womensClothing: {
+//     title: "Women's Clothing",
+//     name: "Elegant Apparel Collection",
+//     imageLink: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=400&fit=crop"
+//   }
+// }
+// ];
 export const CategoryInfos = [
-    {
-  electronics: {
+  {
+    id: "electronics",
     title: "Electronics",
     name: "Latest Gadgets & Tech",
-    imageLink: "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=400&fit=crop"
+    imageLink:
+      "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=400&fit=crop",
   },
-  mensClothing: {
+  {
+    id: "mensClothing",
     title: "Men's Clothing",
     name: "Premium Fashion Wear",
-    imageLink: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&h=400&fit=crop"
+    imageLink:
+      "https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&h=400&fit=crop",
   },
-  fashionTrends: {
+  {
+    id: "fashionTrends",
+    id: "fashionTrends",
     title: "Discover Fashion Trends",
     name: "Style Inspiration 2024",
-    imageLink: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=400&fit=crop"
+    imageLink:
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=400&fit=crop",
   },
-  womensClothing: {
+  {
+    id: "womensClothing",
     title: "Women's Clothing",
     name: "Elegant Apparel Collection",
-    imageLink: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=400&fit=crop"
-  }
-}
+    imageLink:
+      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=400&fit=crop",
+  },
 ];

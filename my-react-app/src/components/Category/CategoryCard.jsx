@@ -1,17 +1,19 @@
-import React from 'react'
-import classes from './Category.module.css'
-const CategoryCard = ({data}) => {
+// 
+import React from "react";
+import classes from "./Category.module.css";
+
+const CategoryCard = ({ data }) => {
   return (
     <div className={classes.category}>
-      <a href="">
+      <a href={data.link || "#"}>
         <span>
-            <h2>data.title</h2>
+          <h2>{data.title}</h2>
         </span>
-        <img src={data.imgLink} alt="" />
+        <img src={data.imgLink} alt={data.title || "Category image"} />
         <p>shop now</p>
       </a>
     </div>
-  )
-}
+  );
+};
 
-export default CategoryCard
+export default CategoryCard;
