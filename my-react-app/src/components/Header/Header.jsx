@@ -76,10 +76,12 @@
 
 import React from "react";
 import classes from "../Header/header.module.css";
+import { Link } from "react-router-dom";
 import LowerHeader from "./LowerHeader";
 import { BsSearch } from "react-icons/bs";
 import { SlLocationPin } from "react-icons/sl";
 import { BiCart } from "react-icons/bi";
+
 
 const Header = () => {
   return (
@@ -113,7 +115,7 @@ const Header = () => {
           </div>
 
           <div className={classes.order_container}>
-            <a href="" className={classes.language}>
+            <a href="/" className={classes.language}>
               <img
                 src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
                 alt="USA flag"
@@ -123,14 +125,14 @@ const Header = () => {
               </select>
             </a>
 
-            <a href="">
+            <a href="/SignIn">
               <div>
                 <p>Sign In</p>
                 <span> Account & Lists</span>
               </div>
             </a>
 
-            <a href="">
+            <a href="/Orders">
               <p>returns</p>
               <span>& Orders</span>
             </a>
