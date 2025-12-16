@@ -106,7 +106,36 @@
     justify-items: center;
     padding: 0 20px; /* Added padding for mobile */
 }
+.product_flexed {
+    box-shadow: none;
+    height: auto;
+    display: flex;
+    gap: 50px;
+    width: 100%;
+}
+.product_flexed h3 {
+    padding: 20px 0px;
+}
+.product_flexed .button {
+    display: block;
+    position: static;
+    width: 150px;
+    margin-right: 40px;
+}
+.product_flexed {
+    height: 50vh;
+}
+.product_flexed img {
+    width: 300px !important;
+    height: auto;
 
+}
+@media screen  and (max-width: 768px) {
+    .product_flexed {
+        display: flex;
+        flex-direction: column;
+    }
+}
 /* This rule seems unnecessary since .products_container is already a section */
 /* .products_container section {
     margin: 0 auto;

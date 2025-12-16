@@ -8,7 +8,7 @@ function Payment() {
   );
 }
 
-// export default Payment
+export default Payment
 // // import React from "react";
 // import classes from "../Header/header.module.css";
 // import LowerHeader from "./LowerHeader";

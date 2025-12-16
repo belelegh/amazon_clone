@@ -4,7 +4,7 @@ import Layout from '../../components/Layout/Layout'
 function Signup() {
   return (
     <Layout>
-      <div>SignIn</div>
+      <div>Signup</div>
     </Layout>
   );
 }

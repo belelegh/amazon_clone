@@ -3,35 +3,32 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "./ProductCard";
 import classes from './Product.module.css'
+import Loader from "../Loader/Loader";
 
 function Product() {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
-    axios
-      .get("https://fakestoreapi.com/products")
+    axios.get("https://fakestoreapi.com/products")
       .then((res) => {
-        setProducts(res.data);
-        setLoading(false);
+        setProducts(res.data)
+        setIsLoading(false)
       })
       .catch((err) => {
-        console.log(err);
-        setError("Failed to load products");
-        setLoading(false);
-      });
+        console.log(err)
+        isLoading(false)
+      })
   }, []);
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>{error}</div>;
-
   return (
-    <section className={classes.products_container}>
-      {products.map((singleProduct) => (
-        <ProductCard product={singleProduct} key={singleProduct.id} />
-      ))}
-    </section>
+    <>
+      {isLoading ? (<Loader />) : (
+        <section className={classes.products_container}>
+          {products.map((singleProduct) => (
+            <ProductCard product={singleProduct} key={singleProduct.id} />
+          ))}
+        </section>
+      )}
+    </>
   );
 }
 
