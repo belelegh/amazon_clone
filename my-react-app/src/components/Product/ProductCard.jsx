@@ -13,10 +13,10 @@ function ProductCard({ product, flex, renderDesc }) {
   const { state, dispatch } = useContext(DataContext);
 
   const addToCart = () => {
-    if (!id) {
-      console.error("Product ID is missing");
-      return;
-    }
+    // if (!id) {
+    //   console.error("Product ID is missing");
+    //   return;
+    // }
 
     dispatch({
       type: Type.ADD_TO_BASKET,
@@ -31,7 +31,7 @@ function ProductCard({ product, flex, renderDesc }) {
     });
 
     // Optional: Show notification or feedback
-    console.log(`${title} added to cart`);
+    // console.log(`${title} added to cart`);
   };
 
   // Check if product is already in cart
