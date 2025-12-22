@@ -1,11 +1,13 @@
 /* cart.module.css */
 
 .container {
+    display: flex;
+    gap: 20px;
   padding: 20px;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   background-color: #eaeded;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .cart_container {
@@ -13,7 +15,9 @@
   gap: 20px;
   flex-wrap: wrap;
 }
-
+.container dev:not(.subtotal) {
+    height: auto !important;
+}
 /* Cart Items Section */
 .cart_items {
   flex: 1;
@@ -64,7 +68,9 @@
   font-size: 14px;
   transition: all 0.2s ease;
 }
-
+.container img {
+    width: 100px !important;
+}
 .continue_shopping:hover {
   background-color: #f7fafa;
   text-decoration: underline;
