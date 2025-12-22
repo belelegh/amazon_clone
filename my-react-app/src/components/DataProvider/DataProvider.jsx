@@ -17,7 +17,7 @@ import React, { createContext, useReducer } from "react";
 // Create Context
 export const DataContext = createContext();
 
-const DataProvider = ({ children, reducer, initialState }) => {
+export const DataProvider = ({ children, reducer, initialState }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (

@@ -6,12 +6,11 @@ import { DataContext } from "../DataProvider/DataProvider";
 import { Type } from "../../Utility/action.type";
 import { Link } from "react-router-dom"; // Added for SPA navigation
 
-function ProductCard({ product, flex, renderDesc }) {
+function ProductCard({ product, flex, renderDesc, renderAdd }) {
   const { image, title, id, rating, price, description } = product;
 
   // Use useContext with DataContext - ensure you're getting state and dispatch
   const { state, dispatch } = useContext(DataContext);
-
   const addToCart = () => {
     // if (!id) {
     //   console.error("Product ID is missing");
@@ -39,9 +38,7 @@ function ProductCard({ product, flex, renderDesc }) {
 
   return (
     <div
-      className={`${classes.card_container} ${
-        flex ? classes.product_fixed : ""
-      }`}
+      className={`${classes.card_container} ${ flex?classes.product_fixed : "" }`}
     >
       {/* Use Link instead of anchor for SPA navigation */}
       <Link to={`/products/${id}`}>
@@ -59,7 +56,7 @@ function ProductCard({ product, flex, renderDesc }) {
         <h3 className={classes.product_title}>{title || "Untitled Product"}</h3>
 
         {renderDesc && (
-          <div className={classes.description}>
+          <div style={{ maxWidth: "700px" }} className={classes.description}>
             {description || "No description available"}
           </div>
         )}
@@ -80,7 +77,8 @@ function ProductCard({ product, flex, renderDesc }) {
           <CurrencyFormat amount={price || 0} />
         </div>
 
-        <button
+      {
+        renderAdd &&   <button
           className={`${classes.button} ${isInCart ? classes.in_cart : ""}`}
           onClick={addToCart}
           disabled={isInCart} // Optional: disable if already in cart
@@ -88,6 +86,7 @@ function ProductCard({ product, flex, renderDesc }) {
         >
           {isInCart ? "Added to Cart" : "Add to Cart"}
         </button>
+      }
 
         {isInCart && (
           <div className={classes.cart_indicator}>✓ Item in cart</div>
