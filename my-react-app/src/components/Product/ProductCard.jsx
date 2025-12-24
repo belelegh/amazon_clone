@@ -12,10 +12,6 @@ function ProductCard({ product, flex, renderDesc, renderAdd }) {
   // Use useContext with DataContext - ensure you're getting state and dispatch
   const { state, dispatch } = useContext(DataContext);
   const addToCart = () => {
-    // if (!id) {
-    //   console.error("Product ID is missing");
-    //   return;
-    // }
 
     dispatch({
       type: Type.ADD_TO_BASKET,
@@ -29,8 +25,6 @@ function ProductCard({ product, flex, renderDesc, renderAdd }) {
       },
     });
 
-    // Optional: Show notification or feedback
-    // console.log(`${title} added to cart`);
   };
 
   // Check if product is already in cart
@@ -97,82 +91,3 @@ function ProductCard({ product, flex, renderDesc, renderAdd }) {
 }
 
 export default ProductCard;
-// import React from 'react'
-// import Rating from '@mui/material/Rating'
-// import CurrencyFormat from '../CurrencyFormat/CurrencyFormat';
-// function ProductCard({oroduct}) {
-//     const { image, title, id, rating, price } = product;
-//   return (
-//     <div>
-//       <a href="">
-//         <img src={image} alt="" />
-//       </a>
-//       <div>
-//         <h3>{title}</h3>
-//         <div>
-//           {/* rating */}
-//           <Rating value={rating.rate} precision={0.1} />
-//           {/* count*/}
-//           <small>{rating.count}</small>
-
-//         </div>
-//         <div>
-//             {/* pricing */}
-//             <CurrencyFormat amount={price}/>
-//         </div>
-//         <button>
-//             abb to cart
-//         </button>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default ProductCard
-
-// import React, { useContext } from "react";
-// import Rating from "@mui/material/Rating";
-// import CurrencyFormat from "../CurrencyFormat/CurrencyFormat";
-// import classes from './Product.module.css'
-// import { DataContext } from "../DataProvider/DataProvider";
-// import { Type } from "../../Utility/action.type";
-
-// function ProductCard({product, flex,renderDesc}) {
-//   const { image, title, id, rating, price, description } = product;
-//    const [state,dispatch]=useContext(DataContext)
-
-//    const addToCart = ()=>{
-//     dispatch({
-//       type: Type.ADD_TO_BASKET,
-//       item: {
-//         image, title, id, rating, price, description
-//       }
-//     })
-//    }
-
-//   return (
-//     <div className={`${classes.card_container} ${flex?classes.product_fixed : ''}`}>
-//       <a href={`/products/${id}`}>
-//         <img src={image} alt={title} className={classes.img_container} />
-//       </a>
-//       <div>
-//         <h3>{title}</h3>
-//       {renderDesc && <div style={{maxWidth:"750px"}}>{description}</div> }
-//         <div className={classes.rating}>
-//           {/* rating */}
-//           <Rating value={rating?.rate || 0} precision={0.1} readOnly />
-//           {/* count*/}
-//           <small>{rating?.count || 0} reviews</small>
-//         </div>
-//         <div>
-//           {/* pricing */}
-//           <CurrencyFormat amount={price} />
-//         </div>
-//         <button className={classes.button} onClick={addToCart} >
-//           Add to cart</button>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default ProductCard;

@@ -9,7 +9,27 @@
   background-color: #eaeded;
   /* min-height: 100vh; */
 }
-
+.cart_item_wrapper {
+    display: flex;
+    gap: 10px;
+}
+.quantity_controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.quantity_button {
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+}
+.quantity_button svg{
+background-color: yellow
+}
 .cart_container {
   display: flex;
   gap: 20px;
